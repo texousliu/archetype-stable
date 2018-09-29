@@ -1,0 +1,105 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>${version}</version>
+    <name>${symbol_dollar}{project.artifactId}</name>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.4.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <modules>
+        <module>../${artifactId}-api</module>
+        <module>../${artifactId}-service</module>
+        <module>../${artifactId}-dao</module>
+        <module>../${artifactId}-web</module>
+        <module>../${artifactId}-common</module>
+    </modules>
+
+    <properties>
+        <project_version>${version}</project_version>
+        <jdk.version>1.8</jdk.version>
+        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
+        <maven-jar-plugin.version>3.1.0</maven-jar-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <spring.boot.starter.version>2.0.4.RELEASE</spring.boot.starter.version>
+        <spring.cloud.version>Finchley.SR1</spring.cloud.version>
+        <lombok.version>1.18.2</lombok.version>
+    </properties>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${symbol_dollar}{lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${symbol_dollar}{maven-jar-plugin.version}</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                            </manifest>
+                            <addMavenDescriptor>false</addMavenDescriptor><!-- 生成的jar中，不要包含pom.xml和pom.properties这两个文件 -->
+                        </archive>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${symbol_dollar}{maven-compiler-plugin.version}</version><!--${symbol_dollar}NO-MVN-MAN-VER${symbol_dollar}-->
+                    <configuration>
+                        <compilerVersion>${symbol_dollar}{jdk.version}</compilerVersion>
+                        <source>${symbol_dollar}{jdk.version}</source>
+                        <target>${symbol_dollar}{jdk.version}</target>
+                        <encoding>${symbol_dollar}{project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${symbol_dollar}{maven-surefire-plugin.version}</version><!--${symbol_dollar}NO-MVN-MAN-VER${symbol_dollar}-->
+                    <configuration>
+                        <skipTests>true</skipTests>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <sourceDirectory>${symbol_dollar}{basedir}/src/main/java</sourceDirectory>
+    </build>
+
+
+</project>

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: project-web
+debug: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1110/eureka/
