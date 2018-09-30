@@ -21,7 +21,7 @@
 >项目结构详细图
 ![项目结构详细图](http://leven-test-bucket.nos-eastchina1.126.net/doc/myself/archetype-stable/archetype_structure.png)
 >项目构建日志
-![项目构建日志](http://leven-test-bucket.nos-eastchina1.126.net/doc/myself/archetype-stable/maven_build_log.png)
+http://leven-test-bucket.nos-eastchina1.126.net/doc/myself/archetype-stable/maven_build_log.png
 
 ----------
 #### 使用命令行导入 ####
