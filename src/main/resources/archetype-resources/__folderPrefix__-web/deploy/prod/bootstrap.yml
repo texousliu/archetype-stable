@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: ${artifactId}
+      profile: prod
+      label: master
+      uri: http://localhost:7010/
