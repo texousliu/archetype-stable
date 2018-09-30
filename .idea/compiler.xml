@@ -9,11 +9,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="project-archetype-archetype" />
+        <module name="myself_archetype_stable_web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="project-archetype-archetype" target="1.5" />
+    <bytecodeTargetLevel target="8">
+      <module name="myself_archetype_stable_web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

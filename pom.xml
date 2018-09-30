@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>cn.texous.archetype</groupId>
-  <artifactId>project-archetype-archetype</artifactId>
+  <artifactId>myself_archetype_stable_web</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
-  <name>project-archetype-archetype</name>
+  <name>myself_archetype_stable_web</name>
 
   <build>
     <extensions>

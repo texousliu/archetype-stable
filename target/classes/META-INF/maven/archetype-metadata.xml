@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="project-archetype"
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="archetype-stable"
     xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <fileSets>
 
     <fileSet filtered="true" encoding="UTF-8">
-      <directory>__artifactId__-api</directory>
+      <directory>__folderPrefix__-api</directory>
       <includes>
         <include>**/*.xml</include>
         <include>**/*.java</include>
@@ -13,7 +13,7 @@
     </fileSet>
 
     <fileSet filtered="true" encoding="UTF-8">
-      <directory>__artifactId__-common</directory>
+      <directory>__folderPrefix__-common</directory>
       <includes>
         <include>**/*.java</include>
         <include>**/*.xml</include>
@@ -21,7 +21,7 @@
     </fileSet>
 
     <fileSet filtered="true" encoding="UTF-8">
-      <directory>__artifactId__-dao</directory>
+      <directory>__folderPrefix__-dao</directory>
       <includes>
         <include>**/*.java</include>
         <include>**/*.xml</include>
@@ -29,7 +29,7 @@
     </fileSet>
 
     <fileSet filtered="true" encoding="UTF-8">
-      <directory>__artifactId__-parent</directory>
+      <directory>__folderPrefix__-parent</directory>
       <includes>
         <include>**/*.java</include>
         <include>**/*.xml</include>
@@ -37,7 +37,7 @@
     </fileSet>
 
     <fileSet filtered="true" encoding="UTF-8">
-      <directory>__artifactId__-service</directory>
+      <directory>__folderPrefix__-service</directory>
       <includes>
         <include>**/*.java</include>
         <include>**/*.xml</include>
@@ -45,7 +45,7 @@
     </fileSet>
 
     <fileSet filtered="true" encoding="UTF-8">
-      <directory>__artifactId__-web</directory>
+      <directory>__folderPrefix__-web</directory>
       <includes>
         <include>**/*.java</include>
         <include>**/*.xml</include>
@@ -54,4 +54,11 @@
     </fileSet>
 
   </fileSets>
+
+  <requiredProperties>
+    <requiredProperty key="folderPrefix">
+      <defaultValue>${folderPrefix}</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+
 </archetype-descriptor>
