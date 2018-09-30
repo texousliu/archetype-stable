@@ -1,5 +1,5 @@
-###使用方式
-####使用 IDEA 方式使用
+### 使用方式 ###
+#### 使用 IDEA 方式使用 ####
 1. 获取项目源码：[https://github.com/texousliu/archetype-stable.git](https://github.com/texousliu/archetype-stable.git)
 2. 进入项目所在文件夹（进入 archetype-stable 中）
 3. 使用 maven 编译项目 ( mvn clean install )
@@ -23,7 +23,7 @@
 
 
 ----------
-####使用命令行导入
+#### 使用命令行导入 ####
 1. 前三步同 IDEA 方式
 2. ${JAVA_HOME}\bin\java.exe -Dmaven.multiModuleProjectDirectory=${tempdey} -Dmaven.home=${M2_HOME} -Dclassworlds.conf=${M2_HOME}\bin\m2.conf -Dfile.encoding=UTF-8 -classpath ${M2_HOME}\boot\plexus-classworlds-2.5.2.jar org.codehaus.classworlds.Launcher --debug -s ${M2_HOME}\conf\settings.xml -Dmaven.repo.local=${maven仓库地址} -DinteractiveMode=false -DgroupId=${groupId} -DartifactId=${artifactId} -Dversion=${version} -DarchetypeGroupId=cn.texous.archetype -DarchetypeArtifactId=myself_archetype_stable_web -DarchetypeVersion=0.0.1-SNAPSHOT -DfolderPrefix=${folderPrefix} org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate
 3. 参数解释：${JAVA_HOME}=java目录; ${temodey}=自定义文件夹; ${M2_HOME}=maven项目安装目录; 
