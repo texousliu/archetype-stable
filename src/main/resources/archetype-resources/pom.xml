@@ -5,8 +5,4 @@
     <version>${version}</version>
     <modelVersion>4.0.0</modelVersion>
 
-    <properties>
-        <folderPrefix>${folderPrefix}</folderPrefix>
-    </properties>
-
 </project>
