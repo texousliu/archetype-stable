@@ -13,19 +13,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>${groupId}</groupId>
     <artifactId>${folderPrefix}-web</artifactId>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${symbol_dollar}{spring.cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -37,6 +26,11 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
         <dependency>
